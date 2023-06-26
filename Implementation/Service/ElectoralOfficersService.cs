@@ -67,7 +67,7 @@ public class ElectoralOfficersService : IElectoralService
         };
     }
 
-    public async Task<async<BaseResponse<ICollection<ElectoralOfficerDTO>>>> GetAllElectoralOfficersAsync()
+    public async Task<BaseResponse<ICollection<ElectoralOfficerDTO>>> GetAllElectoralOfficersAsync()
     {
         var electoralOfficers = await _electoralOfficerRepository.GetAllElectoralOfficers();
         if (electoralOfficers is null)
